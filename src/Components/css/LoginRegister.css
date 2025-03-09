@@ -1,3 +1,4 @@
+
 .wrapper {
     position: relative;
     width: 420px;
@@ -9,52 +10,20 @@
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     flex-direction: column;
-    transition: height 0.3s ease-in-out;
+    padding: 40px; /* Add padding to the wrapper */
 }
 
-.wrapper {
-    min-height: 400px; /* Adjust this if needed */
-}
-.wrapper.active {
-    min-height: 580px;
-}
-
-
-.wrapper .form-box {
-    width: 100%;
-    padding: 40px;
-    position: absolute;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 1;
-}
-
-.wrapper .form-box.login {
-    transform: translateX(0);
-    opacity: 1;
-    position: relative; /* Ensure visibility */
-}
-
-
-.wrapper.active .form-box.login {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-.wrapper .form-box.register {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.wrapper.active .form-box.register {
-    transform: translateX(0);
-    opacity: 1;
+form {
+    width: 100%; /* Ensure the form takes full width */
 }
 
 form h1 {
     font-size: 36px;
     text-align: center;
+    margin-bottom: 20px; /* Add spacing below the heading */
 }
 
 .input-box {
@@ -132,13 +101,8 @@ form button:hover {
     background: #ddd;
 }
 
-form .register-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-}
-
-.register-link {
+form .register-link,
+form .login-link {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
@@ -147,38 +111,13 @@ form .register-link {
     gap: 5px; /* Adjust spacing */
 }
 
-.register-link p {
-    margin: 0; /* Remove default margin */
-    display: inline;
-}
-
-.register-link a {
-    text-decoration: underline;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline;
-}
-
-
-.register-link p a:hover {
-    text-decoration: underline;
-}
-
-.login-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-    display: flex;
-    justify-content: center;
-    gap: 5px; /* Adjust spacing */
-}
-
+.register-link p,
 .login-link p {
     margin: 0; /* Remove default margin */
     display: inline;
 }
 
+.register-link a,
 .login-link a {
     text-decoration: underline;
     color: #fff;
@@ -187,5 +126,19 @@ form .register-link {
     display: inline;
 }
 
+.register-link a:hover,
+.login-link a:hover {
+    text-decoration: underline;
+}
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
