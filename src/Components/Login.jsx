@@ -24,6 +24,7 @@ const Login = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'X-API-Key': "kizkazkuz2025",
                 },
                 body: JSON.stringify(loginFormData),
             });
