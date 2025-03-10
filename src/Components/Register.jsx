@@ -43,6 +43,7 @@ const Register = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'X-API-Key': "kizkazkuz2025",
                 },
                 body: JSON.stringify(regisFormData),
             });

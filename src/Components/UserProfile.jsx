@@ -22,6 +22,7 @@ const UserProfile = () => {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
+                        'X-API-Key': "kizkazkuz2025",
                         Authorization: `Bearer ${token}`,
                     },
                 });
